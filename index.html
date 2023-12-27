@@ -10,6 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
     <link rel="stylesheet" href="css/utilities.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Edgeledger</title>
@@ -17,7 +19,7 @@
   <body id="home">
     <header class="hero">
       <!-- navbar / header secion (flex) -->
-      <div id="navbar" class="navbar">
+      <div id="navbar" class="navbar top">
         <!-- logo section (left side)-->
         <h1 class="logo">
           <span class="text-primary">
@@ -124,20 +126,76 @@
         </header>
         <div class="row">
           <div class="column">
-            <img src="images/cases/cases1.jpg" alt="" />
-            <img src="images/cases/cases2.jpg" alt="" />
+            <a
+              href="images/cases/cases1.jpg"
+              data-lightbox="cases"
+              data-title="testing"
+              alt=""
+            >
+              <img src="images/cases/cases1.jpg" alt="" />
+            </a>
+            <a
+              href="images/cases/cases2.jpg"
+              data-lightbox="cases"
+              data-title="testing"
+              alt=""
+            >
+              <img src="images/cases/cases2.jpg" alt="" />
+            </a>
           </div>
           <div class="column">
-            <img src="images/cases/cases3.jpg" alt="" />
-            <img src="images/cases/cases4.jpg" alt="" />
+            <a
+              href="images/cases/cases3.jpg"
+              data-lightbox="cases"
+              data-title="testing"
+              alt=""
+            >
+              <img src="images/cases/cases3.jpg" alt="" />
+            </a>
+            <a
+              href="images/cases/cases4.jpg"
+              data-lightbox="cases"
+              data-title="testing"
+              alt=""
+            >
+              <img src="images/cases/cases4.jpg" alt="" />
+            </a>
           </div>
           <div class="column">
-            <img src="images/cases/cases5.jpg" alt="" />
-            <img src="images/cases/cases6.jpg" alt="" />
+            <a
+              href="images/cases/cases5.jpg"
+              data-lightbox="cases"
+              data-title="testing"
+              alt=""
+            >
+              <img src="images/cases/cases5.jpg" alt="" />
+            </a>
+            <a
+              href="images/cases/cases6.jpg"
+              data-lightbox="cases"
+              data-title="testing"
+              alt=""
+            >
+              <img src="images/cases/cases6.jpg" alt="" />
+            </a>
           </div>
           <div class="column">
-            <img src="images/cases/cases7.jpg" alt="" />
-            <img src="images/cases/cases8.jpg" alt="" />
+            <a
+              href="images/cases/cases7.jpg"
+              data-lightbox="cases"
+              data-title="testing"
+              alt=""
+            >
+              <img src="images/cases/cases7.jpg" alt="" />
+            </a>
+            <a
+              href="images/cases/cases8.jpg"
+              data-lightbox="cases"
+              data-title="testing"
+              alt=""
+            >
+              <img src="images/cases/cases8.jpg" alt="" />
+            </a>
           </div>
         </div>
       </section>
@@ -249,5 +307,47 @@
       </div>
       <p>Copyright &copy; 2023 - Edgeledger</p>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/lightbox.min.js"></script>
+    <!--   -->
+    <script>
+      const navbar = document.getElementById('navbar')
+      let scrolled = false
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove('top')
+          if (!scrolled) {
+            navbar.style.transform = 'translateY(-70px)'
+          }
+          setTimeout(() => {
+            navbar.style.transform = 'translateY(0px)'
+            scrolled = true
+          }, 200)
+        } else {
+          navbar.classList.add('top')
+          scrolled = false
+        }
+      }
+
+      // Smooth Scrolling
+      $('#navbar a, .btn').on('click', function (e) {
+        if (this.hash !== '') {
+          e.preventDefault()
+
+          const hash = this.hash
+
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            800
+          )
+        }
+      })
+    </script>
   </body>
 </html>
