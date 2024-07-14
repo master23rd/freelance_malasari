@@ -48,6 +48,12 @@
   color: #333;
 }
 
+.btn-white,
+.bg-white {
+  background: #fff;
+  color: #333;
+}
+
 .btn-outline {
   background: transparent;
   border: 1px solid #fff;
@@ -136,4 +142,131 @@
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
+}
+
+.item {
+  color: #333;
+  /* background: #f4f4f4; */
+  background: #ffffff;
+  border: #ccc solid 2px;
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+  /* max-width: 200px; */
+  /* width: 250px; */
+  /* flex:grow,shrink, basis */
+  flex: 1;
+  flex-basis: 200px;
+  box-shadow: 0 0 8px #00000024;
+}
+
+.item-card {
+  /* height: 300px; */
+  display: inline-block;
+}
+
+.item-card img.kopi {
+  /* display: none; */
+  /* height: 100%; */
+  transform: rotate(8deg);
+  z-index: 5;
+  display: none;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+
+.item-card.location:hover {
+  background: none;
+}
+
+.item-card:hover {
+  background: linear-gradient(45deg, #f9d450, #f09f43);
+}
+
+.item-card#milk:hover {
+  background: #23b4ff;
+}
+
+.item-card#catering:hover {
+  background: #000000;
+}
+
+.item-card:hover img.kopi {
+  display: inline;
+  /* background: yellow; */
+}
+
+.item-header {
+  padding: 10px;
+}
+
+.item-header.kopi {
+  padding: 30px;
+  /* margin-top: 280px; */
+  text-align: center;
+}
+
+.item-title {
+  padding: 0 10px;
+  width: 80%;
+}
+
+.flex-container {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  /* padding: 20px; */
+}
+
+.flex-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-container img.kopi {
+  /* transform: rotate(1deg); */
+  /* display: none; */
+  /* width: 100%; */
+  /* top: 1170px; */
+  /* position: absolute; */
+  /* height: 50%; */
+  /* left: 80px; */
+}
+
+.flex-container .item-card .btn {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+.subsection {
+  /* padding: 30px; */
+  padding: 40px 100px 50px;
+}
+
+.subsection h1 {
+  /* font-size: 48px; */
+  font-size: 3rem; /*2rem*/
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.subsection .flex-items > h1 {
+  font-family: 'CustomFont', 'DM Sans', sans-serif;
+}
+
+.subsection p {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.subsection i {
+  /* background-color: #28a745; */
+  color: #112556; /*#fff;*/
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
